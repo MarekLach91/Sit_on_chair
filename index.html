@@ -4,62 +4,234 @@
 <head>
     <meta charset="UTF-8">
     <title>SIT ON CHAIR</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700" rel="stylesheet"> </head>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head>
 
 <body>
     <header>
-        <div class="container">
-            <p>SIT <span>ON</span>CHAIR</p>
-            <ul>
-                <li>O FIRMIE</li>
-                <li>GALERIA</li>
-                <li>KONTAKT</li>
-            </ul>
+        <div class="grid-container">
+            <div class="col-4 logo">
+                <div class="logo_color">SIT <span>ON</span> CHAIR</div>
+            </div>
+            <div class="col-8">
+                <nav>
+                    <ul>
+                        <li>ABOUT US</li>
+                        <li>GALLERY</li>
+                        <li>CONTACT</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hamburger_menu"></div>
+            <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
     </header>
-    <section id="first">
-        <div class="container">
-            <div id="img1"></div>
-            <div id="text">
-                <h2>SIT <span>ON</span> OUR <span>CHAIR</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis omnis vero, quisquam labore magnam unde architecto aliquam beatae consectetur repudiandae fuga libero explicabo aliquid, tenetur possimus sunt alias excepturi amet.</p>
-                <div id="link">
-                <a href="#">ZOBACZ WIĘCEJ</a>
+    <section class="one">
+        <div class="grid-container">
+            <div class="col-6 property_one chair">
+                <span class="buttonLeft">&lsaquo;</span>
+                <div class="chair1 allchair"></div>
+            </div>
+            <div class="col-6 property_one text_chair">
+                <span class="buttonRight">&rsaquo;</span>
+                <div id="text">
+                    <h2>SIT <span>ON</span> OUR <span>CHAIR</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis omnis vero, quisquam labore magnam unde architecto aliquam beatae consectetur repudiandae fuga libero explicabo aliquid.</p>
+                    <p id="buttonOne">ZOBACZ WIĘCEJ</p>
                 </div>
             </div>
-            
-        </div>
-        <div class="clearfix"></div>
-    </section>
-    <section id="second">
-        <div class="container">
-            <div class="all" id="one"></div>
-            <div class="all" id="two"></div>
-            <div id="three">Find all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.
-            <br>
-            <br> 
-            Notice there is no change when clicking the checkboxes since no click events have been </div>
             <div class="clearfix"></div>
         </div>
     </section>
-    <section id="third">
-        <div class="container"> </div>
-    </section>
-    <section id="fourth">
-        <div class="container"> 
-        <div id="input">
-            <input type="text" name="name" placeholder="Imię">
-            <input type="text" name="surname" placeholder="email">
-            <input id="spec" type="text" name="massage" placeholder="Wiadomość">
-            
+    <section class="two">
+        <div class="grid-container">
+            <div class="col-4 imgsize">
+                <div class="img1">
+                    <div class="transparentPart uText">
+                        Chair CLAIR
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 imgsize">
+                <div class="img2">
+                    <div class="transparentPart uText">
+                        Chair MARGARITA
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 imgsize text1">
+                <p class="uText">Finds all inputs</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis omnis vero, quisquam labore magnam unde architecto aliquam beatae consectetur repudiandae fuga libero explicabo aliquid.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis omnis vero, quisquam labore magnam unde architecto</p>
+            </div>
+            <div class="clearfix"></div>
         </div>
+    </section>
+    <section class="three">
+        <div class="grid-container">
+            <div class="container row">
+                <h2 class="uText2 uText">CENNIK</h2>
+            </div>
+            <div class="col-4 st_block">
+                <div class="priceBox">
+                    <h3 class="planName">BASIC PLAN</h3>
+                    <div class="circlePrice">
+                        <span class="price">8</span>5<sup>99</sup>
+                        <span class="priceDescription">PLN/MSC</span>
+                    </div>
+                    <ul class="listBox">
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                    </ul>
+                    <a href="#" class="join">
+          DOŁĄCZ
+        </a>
+                </div>
+            </div>
+            <div class="col-4 nd_block">
+                <div class="priceBox active2">
+                    <h3 class="planName activeName">STANDARD PLAN</h3>
+                    <div class="circlePrice activeText">
+                        9<span class="price">5</span><sup>99</sup>
+                        <span class="priceDescription">PLN/MSC</span>
+                    </div>
+                    <ul class="listBox listBox2">
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                        <li>Gwarancja 5 lat</li>
+                    </ul>
+                    <a href="#" class="join activeText">
+          DOŁĄCZ
+        </a>
+                </div>
+            </div>
+            <div class="col-4 rd_block">
+                <div class="priceBox priceBoxLast">
+                    <h3 class="planName">ADVACE PLAN</h3>
+                    <div class="circlePrice">
+                        <span class="price">211</span><sup>00</sup>
+                        <span class="priceDescription">PLN/MSC</span>
+                    </div>
+                    <ul class="listBox">
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                        <li>Gwarancja 6 lat</li>
+                        <li>Porady projektanta</li>
+                    </ul>
+                    <a href="#" class="join">
+          DOŁĄCZ
+        </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </section>
-    <footer>
-        <div class="container"> <p>Copright 2014 &#124; All Rights Reservet. &#45; Sit On Chair</p></div>
-    </footer>
+    <section class="four">
+        <div class="grid-container">
+            <div class="col-4 application">
+                <div class="main_width">
+                    <section class="choice_part inline">
+                        <div class="container row">
+                            <h2 class="uText2 uText">SKOMPONUJ SWOJE KRZESŁO</h2>
+                        </div>
+
+                        <div class="form">
+                            <div class="drop_down_list">
+                                <span class="list_label">Wybierz rodzaj</span>
+                                <span class="list_arrow"></span>
+                                <ul class="list_panel">
+                                    <li>Clair</li>
+                                    <li>Margarita</li>
+                                    <li>Selena</li>
+                                </ul>
+                            </div>
+                            <div class="drop_down_list">
+                                <span class="list_label">Wybierz kolor</span>
+                                <span class="list_arrow"></span>
+                                <ul class="list_panel">
+                                    <li>Czerwony</li>
+                                    <li>Czarny</li>
+                                    <li>Pomarańczowy</li>
+                                </ul>
+                            </div>
+                            <div class="drop_down_list">
+                                <span class="list_label">Wybierz materiał</span>
+                                <span class="list_arrow"></span>
+                                <ul class="list_panel">
+                                    <li>Tkanina</li>
+                                    <li>Skóra</li>
+                                </ul>
+                            </div>
+                            <div class="checkbox check-box">
+                                <input type="checkbox" id="transport" data-transport-price="200">
+                                <label for="transport">Transport</label>
+                            </div>
+                            <!--<div class="checkbox"></div>-->
+                            <!--<span class="list_label inline_text">Transport</span>-->
+                        </div>
+                </div>
+            </div>
+            <div class="col-4 application">
+                <img id="redchair" src="images/red_chair.png">
+            </div>
+            <div class="col-4 application">
+                <div class="summary_part inline">
+                    <div class="container row">
+                        <h2 class="uText2 uText">PODSUMOWANIE</h2>
+                    </div>
+
+                    <div class="summary_panel">
+                        <div class="panel_left">
+                            <h4 class="title">Twój fotel</h4>
+                            <span class="color"></span>
+                            <span class="pattern"></span>
+                            <span class="transport"></span>
+                        </div>
+                        <div class="panel_right">
+                            <h4 class="title value"></h4>
+                            <span class="color value"></span>
+                            <span class="pattern value"></span>
+                            <span class="transport value"></span>
+                        </div>
+                        <div class="sum_label">SUMA</div>
+                        <div class="sum"><strong></strong></div>
+                    </div>
+                    <a href="" class="green_button">Zamawiam</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        </section>
+        <section class="five">
+            <div class="grid-container">
+               <div class="container row">
+                <h2 class="uText2 uText">PODSUMOWANIE</h2>
+            </div>
+                <div class="col-8 input_place">
+                  <form id="form_down" action="massage">
+                   <input class="form_two" type="text" name="name" placeholder="Imię">
+                    <input class="form_two" type="text" name="surname" placeholder="email">
+                    <textarea class="form_two noReSize" type="text" placeholder="Wiadomość"></textarea>
+                    </form>
+                </div>
+                <div class="col-4 send_place">
+                <div id="orangechair"></div>
+                 <div class="checkbox check-box confirm-box">
+          <input type="checkbox" id="confirm">
+          <label id="confirm-Text" for="confirm">Zgadzam sie na przetwarzanie danych osobowych</label>
+        </div>
+        <input class="sendAll" type="button" value="WYŚLIJ"/>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+        </section>
+        <footer>
+            <div class="grid-container"></div>
+        </footer>
+        <script src="js/app.js"></script>
 </body>
 
 </html>
