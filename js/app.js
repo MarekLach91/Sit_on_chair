@@ -71,6 +71,9 @@ var pictureIndex = 1;
     this.parentNode.getElementsByClassName("list_panel")[0].classList.toggle("show");
   }
 
+    
+//    toggle
+    
   function calculatePrice(){
     var num1 = isNaN(parseInt(priceName.innerText)) ? 0 : parseInt(priceName.innerText);
     var num2 = isNaN(parseInt(priceColor.innerText)) ? 0 : parseInt(priceColor.innerText);
@@ -124,13 +127,21 @@ var pictureIndex = 1;
       listPanel_3[i].addEventListener("click", selectMaterial);
   }
   transport.addEventListener("click", selectTransport);
+  
+    
+    
+    function hideList(){
+    this.parentNode.getElementsByClassName("list_panel")[0].classList.remove("show");
+      
+  }
     
     
     
-    
-    
-    
-    
+for (var i = 0; i < listPanel_1.length; i++){
+      listPanel_1[i].addEventListener("click", showList);
+       
+}
+//    listPanel_1
     
     
     
