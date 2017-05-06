@@ -97,11 +97,6 @@ header {
   top: -10px;
   left: 50%;
 
-  -ms-transform: translateX(-50%); /* IE 9 */
-  -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */
-  -o-transform: translateX(-50%); /* Opera */
-  -moz-transform: translateX(-50%); /* Firefox */
-  transform: translateX(-50%);
 }
 .openMenu li{
   float: left;
