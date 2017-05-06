@@ -15,17 +15,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 //    border: 1px solid red;
-    padding: 0 10px 0 10px;
+       padding: 0 10px 0 10px;
 }
 
+//
+//min-width: 320px;
+//    max-width: 1800px;
+//    width: 90vw;
+//    height: 100%;
+//    margin: 0 auto;
+
+
 $columns: 12;
-@media (min-width: 660px) {
+@media (min-width: 800px) {
     @for $i from 1 through $columns {
         .col-#{$i} {
 //            border: 1px solid black;
             width: 100%/$columns* $i;
             float: left;
         }
+       
     }
 }
 
@@ -40,12 +49,13 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 15px;
+
 }
 
 .logo_color {
     color: white;
     font-size: 20px;
+    margin-top: 20px;
     span {
         color: #48c39a;
     }
@@ -89,7 +99,7 @@ header {
     transform: rotate(-90deg) translateX(-10px);
 }
 
-@media (min-width: 780px) {
+@media (min-width: 800px) {
     .hamburger_menu {
         display: none;
     }
@@ -99,20 +109,22 @@ nav {
     display: none;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 800px) {
     nav {
         margin-top: 5px;
         height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
-    li {
+         li {
         display: inline-block;
         padding: 1em;
         font-weight: bold;
     }
+    }
+   
 }
+
 
 .one {
     background: rgba(255, 255, 255, 1);
@@ -135,7 +147,6 @@ nav {
 
 .allchair {
     height: inherit;
-    width: 100%;
 }
 
 .buttonLeft {
@@ -165,12 +176,20 @@ nav {
     cursor: pointer;
 }
 
+@media (max-width: 799px) {
+    .buttonRight {
+        position: absolute;
+        top: -342px;
+    }
+    }
+
+
 .chair1 {
     background-image: url(../images/black_chair.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 50px;
+    
 }
 
 .chair2 {
@@ -178,7 +197,6 @@ nav {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 50px;
 }
 
 .chair3 {
@@ -186,7 +204,7 @@ nav {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 50px;
+
 }
 
 .text_chair {
@@ -268,9 +286,10 @@ nav {
   padding: 15px 0 0 14px;
 }
 
-
+.main_name {
+    padding-top: 25px;
+}
 .uText {
-  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -296,8 +315,7 @@ nav {
 
 
 .uText2 {
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 1.5em;
 }
 
@@ -332,7 +350,9 @@ nav {
 
 .four {
     background-color: #f9f9f9;
+    min-height: 500px;
 }
+
 .priceBox {
   float: left;
   margin: 58px 0 0 0;
@@ -401,9 +421,37 @@ nav {
   color: white;
 }
 
-#redchair {
+.redchair {
     margin-top: 125px;
 }
+
+@media (max-width: 800px) {
+ .redchair {
+            margin-top: -60px;
+        }
+}
+
+list_panel {
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 288px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  list-style: none;
+  margin: 0;
+  left: 0px;
+  z-index: 2;
+  position: absolute;
+  top: 54px;
+  display:none;
+}
+.list_panel li {
+  margin-top:10px;
+  cursor: pointer;
+  color: #585858;
+}
+
+
 
 .circlePrice {
   border: 2px solid rgb(217, 217, 217);
@@ -473,6 +521,7 @@ nav {
 }
 sup {
   font-size: 16px;
+   vertical-align: text-top;
 }
 .activeText {
   color: #24ba9f;
@@ -492,14 +541,12 @@ sup {
   text-align: right;
 }
 
-.four {
-    min-height: 500px;
-}
+
 
 .inline {
   display:inline-block;
   width:300px;
-  padding:14px;
+//  padding:14px;
   vertical-align: top;
 }
 
@@ -540,12 +587,13 @@ sup {
 .checkbox label {
   display: block;
   padding-left: 65px;
-  position: relative;
-  font-size: 28px;
   color: #cecece;
   line-height: 120%;
-  padding-top: 10px;
+  padding-top: 5px;
   cursor: pointer;
+  position: relative;
+  font-size: 28px;
+ 
 }
 
 .checkbox label::before, .checkbox label::after {
@@ -623,11 +671,11 @@ sup {
 }
 .panel_left {
   display: inline-block;
-  width: 185px;
+  width: 145px;
   vertical-align: top;
   padding-bottom:10px;
   border-bottom:1px solid #e7e7e7;
-  height: 135px;
+  height: 145px;
 }
 
 .panel_right {
@@ -638,7 +686,7 @@ sup {
   vertical-align: top;
   padding-bottom:10px;
   border-bottom:1px solid #e7e7e7;
-  height: 135px;
+  height: 145px;
 }
 
 .panel_left h4 , .panel_right h4{
@@ -661,7 +709,7 @@ sup {
 }
 .sum_label{
   display: inline-block;
-  width: 185px;
+//  width: 185px;
   margin-top: 10px;
   font-size: 22px;
   color: #5b5a5a;
@@ -669,7 +717,7 @@ sup {
 
 .sum {
   display: inline-block;
-  width: 100px;
+  width: 160px;
   text-align: right;
   margin-top: 10px;
   font-size: 22px;
@@ -708,13 +756,16 @@ sup {
   cursor: pointer;
   color: #585858;
 }
+.show {
+  display: block;
+}
 
 .title {
   height: 30px;
 }
 
 .five {
-    min-height: 620px;
+    min-height: 540px;
     background-color: white;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -727,6 +778,8 @@ sup {
     
     .send_place {
        height: 400px;
+       display: grid;
+       justify-content: center
         
     }  
     
@@ -743,6 +796,9 @@ sup {
     margin-bottom: 26px;
     padding: 11px;
     font-size: 36px;
+    font-family: inherit;
+    color: lightgray;
+    
 }
 
 .noReSize {
@@ -764,12 +820,82 @@ sup {
     
 }
 .sendAll {
+    margin-bottom: 30px;
     padding: 14px;
     font-size: 2em;
-    width: 80%;
+    width: 100%;
     background-color: #24ba9f;
     color: white;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     }
+
+footer {
+    height: 80px;
+}
+
+.footer_rights {
+    margin-top: 10px;
+    color: grey;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.footer_img {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.ficker {
+   background-image:url(../images/flickr.png);
+    height: 35px;
+    width: 35px;
+}
+
+.vimeo {
+    background-image:url(../images/vimeo.png);
+   height: 35px;
+    width: 35px;
+}
+
+.pinterest {
+    background-image:url(../images/pinterest.png);
+    height: 35px;
+    width: 35px;
+}
+.twitter {
+    background-image:url(../images/twitter.png);
+    height: 35px;
+    width: 35px;
+}
+
+
+.link_footer {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.footer_title {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    color: grey;
+    padding: 5px;
+   
+    span {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 880px) {
+   .footer_title,
+    .footer_img,
+    .footer_rights {
+        display: flex;
+    justify-content: center;
+    }
+}
