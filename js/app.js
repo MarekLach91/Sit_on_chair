@@ -1,54 +1,16 @@
 document.addEventListener("DOMContentLoaded", function(){
     
-// change chair 
+    // show menu
     
-//var leftBtn = document.getElementsByClassName('buttonLeft')[0];
-//  var rightBtn = document.getElementsByClassName('buttonRight')[0];    
-//var classPhoto = document.getElementsByClassName('chair1')[0];    
-//var pictureIndex = 1;    
-//    
-//    
-//   function wrap(){
-//    if (pictureIndex < 1){
-//      pictureIndex = 3;
-//    }
-//    else if (pictureIndex > 3){
-//      pictureIndex = 1;
-//    }
-//  }
-//
-//  function prev(){
-//    pictureIndex--;
-//    wrap()
-//    changeImage();
-//    console.log(pictureIndex);
-//  }
-//
-//  function next(){
-//    pictureIndex++;
-//    wrap()
-//    changeImage();
-//    console.log(pictureIndex);
-//  } 
-//    
-//    
-//    
-//    function changeImage(e){
-//    if (pictureIndex == 1){
-//      e.classPhoto.removeClass('.chair1');
-//    }
-//    else if (pictureIndex == 2){
-//      classPhoto.removeClass('.chair1');
-//    }
-//    else if (pictureIndex == 3){
-//     classPhoto.removeClass('.chair1');
-//    }
-//  }
-//    
-//  
-//  leftBtn.addEventListener('click', prev);
-//  rightBtn.addEventListener('click', next);
-//    
+    var menu = document.querySelector(".hamburger_menu");
+    
+    var list_menu = document.querySelector(".open_hamburger");
+    
+    menu.addEventListener('click', function () {
+    list_menu.classList.toggle("show");
+    });
+    
+    
     //slider
     var buttonNext = document.querySelector(".buttonRight");
     var buttonPrev = document.querySelector(".buttonLeft");
@@ -70,8 +32,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if (index === list.length) {
             index = 0;
         }
-        
-        list[index].classList.remove("hidden");
+         list[index].classList.remove("hidden");
     });
     
      buttonPrev.addEventListener('click', function () {
@@ -179,13 +140,10 @@ for (var i = 0; i < listPanel_1.length; i++){
       listPanel_1[i].addEventListener("click", showList);
        
 }
-//    listPanel_1
     
+
     
-    
-}); 
-    
-    
+ });    
     
     
     

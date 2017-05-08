@@ -11,19 +11,13 @@ body {
 }
 
 .grid-container {
-    width: 100%;
+    min-width: 320px;
     max-width: 1200px;
     margin: 0 auto;
 //    border: 1px solid red;
        padding: 0 10px 0 10px;
 }
 
-//
-//min-width: 320px;
-//    max-width: 1800px;
-//    width: 90vw;
-//    height: 100%;
-//    margin: 0 auto;
 
 
 $columns: 12;
@@ -57,7 +51,7 @@ header {
     font-size: 20px;
     margin-top: 20px;
     span {
-        color: #48c39a;
+        color: #27c7ab;
     }
 }
 
@@ -99,13 +93,14 @@ header {
 
 }
 .openMenu li{
+  width: 100%;
   float: left;
-  font-size: 14px;
-  margin-left: 14px;
+  font-size: 16px;
   padding: 0;
   font-weight: normal;
   line-height: 29px;
   display: block;
+  text-align: center;
 
   }
 
@@ -122,9 +117,10 @@ color: white;
     color: white;
 }
 
-.openMenu > li > a:hover {
-    text-decoration: underline;
-    color: black;
+.openMenu > li:hover {
+    color: white;
+    background-color: black; 
+   
 }
 
 .hamburger_menu {
@@ -157,14 +153,14 @@ color: white;
     transition: 0.3s transform linear;
 }
 
-.hamburger_menu:focus {
-    transform: rotate(45deg) translateY(5px);
-    border: none;
-}
-
-.hamburger_menu:focus::after {
-    transform: rotate(-90deg) translateX(-10px);
-}
+//.hamburger_menu:focus {
+//    transform: rotate(45deg) translateY(5px);
+//    border: none;
+//}
+//
+//.hamburger_menu:focus::after {
+//    transform: rotate(-90deg) translateX(-10px);
+//}
 
 @media (min-width: 800px) {
     .hamburger_menu {
@@ -176,19 +172,21 @@ color: white;
 //    display: none;
 //}
 //
-//.hamburger_list.show {
-//            display: block;
-//        }
-//
+.show {
+            display: block;
+        }
 
-.hamburger_menu:hover .open_hamburger {
-    display: block;
-}
+
+//.hamburger_menu:hover .open_hamburger {
+//    display: block;
+//}
 
 .open_hamburger {
-    display: none;
+  display: none;
   position: absolute;
-  width: 120px;
+  border-top: 1px solid white;
+  width: 100vw;
+  height: 150px;
   top: 40px;
   right: -25px;
   background-color: black;
@@ -196,22 +194,22 @@ color: white;
   margin: 0;
   cursor: pointer;
   z-index: 1;
-  border-bottom: 3px solid #24ba9f;
-    border-left: 3px solid #24ba9f;
-    border-right: 3px solid #24ba9f;
-  
+      
 }
 
 .open_hamburger li{
-  float: left;
-  font-size: 14px;
-  margin-left: 14px;
+  font-size: 18px;
+  margin-left: 30px;
   padding: 0;
   font-weight: normal;
-  line-height: 29px;
+  line-height: 40px;
   display: block;
 
   }
+
+.open_hamburger li:hover {
+    background-color: #27c7ab;
+}
 
 //.dropdown:hover .openMenu {
 //  display: block;
@@ -367,7 +365,7 @@ nav {
         font-size: 2.5em;
         margin-top: 40px;
         span {
-            color: #48c39a;
+            color: #27c7ab;
             font-weight: bold;
         }
     }
@@ -384,7 +382,7 @@ nav {
 
 #buttonOne {
         text-decoration: none;
-        background-color: #48c39a;
+        background-color: #27c7ab;
         color: white;
         padding: 15px;
         border-radius: 10px;
@@ -406,47 +404,67 @@ nav {
 }
 
 .two {
+     margin-top: 30px;
     min-height: 330px;
     background-color: white;
-    .imgsize {
-        margin-top: 30px;
-    }
 }
+
+.center_block {
+        display: flex;
+        justify-content: center;
+    }
+ 
     .img1 {
+        width: 325px;
+        height: 220px;
+        margin-right: 5px;
         position: relative;
         background-image: url(../images/box1_img.jpg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        height: 220px;
-        width: 200px;
-        margin-right: 5px;
+        
     }
     .img2 {
+        width: 325px;
+        height: 220px;
+        margin-right: 5px;
         position: relative;
         background-image: url(../images/box2_img.jpg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        height: 220px;
-        width: 200px;
-        width: initial;
-        margin-right: 5px;
+        
     }
 
-    .text1 {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  float: left;
-  border: 1px solid rgb(217, 217, 217);
-  padding: 25px 30px 38px 20px;
+.img1:hover, .img2:hover  {
+    .transparentPart {
+        display: none
+    }
 }
 
+
+
+    .text1 {
+  min-height: 250px;
+  margin-bottom: 20px;      
+  border: 1px solid rgb(217, 217, 217);
+  padding: 25px 30px 38px 20px;
+            display: block;
+        
+}
+
+@media(max-width: 800px) {
+    .center_block {
+        margin-bottom: 10px;
+    }
+}
 .transparentPart {
-  background-color: rgba(25, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  bottom: -8px;
-    width: 100%;
+  bottom: 3px;
+  width: 100%;
+  height: initial;
   font-weight: bold;
   padding: 15px 0 0 14px;
 }
@@ -485,36 +503,10 @@ nav {
   font-size: 1.5em;
 }
 
-
-
-
 .three {
     min-height: 700px;
     background-color: #f1f1f1;
-    
-    
-    .col-4 {
-//        border: 1px solid black;
-    }
-    .st_block:after {
-    
-    }
-    
-    .st_block {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .nd_block {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .rd_block {
-        display: flex;
-        justify-content: center;
-    }
-    
+   
 }
 
 .four {
@@ -523,7 +515,6 @@ nav {
 }
 
 .priceBox {
-  float: left;
   margin: 58px 5px 0 0;
   border: 2px solid rgb(217, 217, 217);
   width: 325px;
@@ -593,6 +584,7 @@ nav {
 .priceBox:hover::after {
     background-color: white; 
 }
+
 
 
 .planName {
@@ -1021,6 +1013,13 @@ sup {
     border: none;
     cursor: pointer;
     }
+
+.sendAll:hover, .green_button:hover {
+    border: 3px solid #24ba9f;
+    background-color: white;
+    color: #24ba9f;
+}
+
 
 footer {
     height: 80px;
