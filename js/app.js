@@ -2,52 +2,90 @@ document.addEventListener("DOMContentLoaded", function(){
     
 // change chair 
     
-var leftBtn = document.getElementsByClassName('buttonLeft')[0];
-  var rightBtn = document.getElementsByClassName('buttonRight')[0];    
-var classPhoto = document.getElementsByClassName('chair1')[0];    
-var pictureIndex = 1;    
+//var leftBtn = document.getElementsByClassName('buttonLeft')[0];
+//  var rightBtn = document.getElementsByClassName('buttonRight')[0];    
+//var classPhoto = document.getElementsByClassName('chair1')[0];    
+//var pictureIndex = 1;    
+//    
+//    
+//   function wrap(){
+//    if (pictureIndex < 1){
+//      pictureIndex = 3;
+//    }
+//    else if (pictureIndex > 3){
+//      pictureIndex = 1;
+//    }
+//  }
+//
+//  function prev(){
+//    pictureIndex--;
+//    wrap()
+//    changeImage();
+//    console.log(pictureIndex);
+//  }
+//
+//  function next(){
+//    pictureIndex++;
+//    wrap()
+//    changeImage();
+//    console.log(pictureIndex);
+//  } 
+//    
+//    
+//    
+//    function changeImage(e){
+//    if (pictureIndex == 1){
+//      e.classPhoto.removeClass('.chair1');
+//    }
+//    else if (pictureIndex == 2){
+//      classPhoto.removeClass('.chair1');
+//    }
+//    else if (pictureIndex == 3){
+//     classPhoto.removeClass('.chair1');
+//    }
+//  }
+//    
+//  
+//  leftBtn.addEventListener('click', prev);
+//  rightBtn.addEventListener('click', next);
+//    
+    //slider
+    var buttonNext = document.querySelector(".buttonRight");
+    var buttonPrev = document.querySelector(".buttonLeft");
+    var slider = document.querySelector('.chair_slider');
+    var list = slider.querySelectorAll("li");
+    var index = 0;
     
     
-   function wrap(){
-    if (pictureIndex < 1){
-      pictureIndex = 3;
-    }
-    else if (pictureIndex > 3){
-      pictureIndex = 1;
-    }
-  }
+    
+    
+    console.log(buttonNext, buttonPrev,slider, list, index);
+    
+    list[index].classList.remove("hidden");
+    
+    buttonNext.addEventListener('click', function () {
 
-  function prev(){
-    pictureIndex--;
-    wrap()
-    changeImage();
-    console.log(pictureIndex);
-  }
+        list[index].classList.add("hidden");
+        index++;
+        if (index === list.length) {
+            index = 0;
+        }
+        
+        list[index].classList.remove("hidden");
+    });
+    
+     buttonPrev.addEventListener('click', function () {
+                 
+        list[index].classList.add("hidden");
+        index--;
+        if (index < 0) {
+            index = list.length - 1;
+        }
 
-  function next(){
-    pictureIndex++;
-    wrap()
-    changeImage();
-    console.log(pictureIndex);
-  } 
+        list[index].classList.remove("hidden");
+    });
     
     
-    
-    function changeImage(e){
-    if (pictureIndex == 1){
-      e.classPhoto.removeClass('.chair1');
-    }
-    else if (pictureIndex == 2){
-      classPhoto.removeClass('.chair1');
-    }
-    else if (pictureIndex == 3){
-     classPhoto.removeClass('.chair1');
-    }
-  }
-    
-  
-  leftBtn.addEventListener('click', prev);
-  rightBtn.addEventListener('click', next);
     
     //CALCULATOR
    var listArrow = document.getElementsByClassName("list_arrow");
@@ -69,7 +107,7 @@ var pictureIndex = 1;
 
   function showList(){
     this.parentNode.getElementsByClassName("list_panel")[0].classList.toggle("show");
-  }
+  };
 
     
 //    toggle
