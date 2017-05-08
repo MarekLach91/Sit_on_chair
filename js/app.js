@@ -135,13 +135,39 @@ document.addEventListener("DOMContentLoaded", function(){
   }
     
     
-    
 for (var i = 0; i < listPanel_1.length; i++){
       listPanel_1[i].addEventListener("click", showList);
-       
-}
-    
 
+}
+//    link refresh
+
+  document.querySelector(".green_button").addEventListener("click", function(event){
+    event.preventDefault()
+});
+    
+  document.querySelector("#buttonOne").addEventListener("click", function(event){
+    event.preventDefault()
+});
+    
+    
+    
+    
+    
+ var join_btn = document.querySelectorAll(".join");
+
+    for (var i = 0; i<join_btn.length; i++) {
+        join_btn[i].addEventListener("click", function(event){
+    event.preventDefault()
+    })
+    }
+                                  
+    
+    
+    
+    
+    
+    
+    
     
  });    
     

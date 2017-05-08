@@ -124,17 +124,16 @@ color: white;
 }
 
 .hamburger_menu {
-    margin-top: -25px;
+    margin-top: -23px;
     margin-right: 15px;
-    width: 40px;
+    width: 35px;
     height: 35px;
     border: 0;
     padding-bottom: 40px;
-    border-top: 5px solid white;
+    border-top: 4px solid white;
     background: transparent;
     position: relative;
     float: right;
-    transition: 0.3s transform linear;
 }
 
 .hamburger_menu::before,
@@ -144,13 +143,12 @@ color: white;
     top: 0;
     left: 0;
     width: 100%;
-    border-top: 5px solid white;
-    transform: translateY(10px);
+    border-top: 4px solid white;
+    transform: translateY(8px);
 }
 
 .hamburger_menu::after {
-    transform: translateY(25px);
-    transition: 0.3s transform linear;
+    transform: translateY(20px);
 }
 
 //.hamburger_menu:focus {
@@ -1014,10 +1012,17 @@ sup {
     cursor: pointer;
     }
 
-.sendAll:hover, .green_button:hover {
+ .green_button:hover {
     border: 3px solid #24ba9f;
     background-color: white;
     color: #24ba9f;
+    margin-bottom: -6px
+}
+.sendAll:hover {
+    border: 3px solid #24ba9f;
+    background-color: white;
+    color: #24ba9f;
+    margin-top: 0px  
 }
 
 
