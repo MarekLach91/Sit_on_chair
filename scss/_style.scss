@@ -46,6 +46,7 @@ header {
     color: white;
     font-size: 20px;
     margin-top: 20px;
+    cursor: pointer;
     span {
         color: #27c7ab;
     }
@@ -225,6 +226,9 @@ nav {
     left: 35px;
     top: 45%;
     opacity: 0.5;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
 }
 
 .buttonLeft:hover {
@@ -239,6 +243,9 @@ nav {
     right: 35px;
     top: 45%;
     opacity: 0.5;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
 }
 
 .buttonRight:hover {
@@ -323,6 +330,7 @@ nav {
         text-align: center;
         font-size: 2.5em;
         margin-top: 40px;
+        cursor: default;
         span {
             color: #27c7ab;
             font-weight: bold;
@@ -335,6 +343,7 @@ nav {
         margin-right: 20%;
         text-align: center;
         font-size: 1em;
+        cursor: default;
     }
 }
 
@@ -478,6 +487,7 @@ nav {
     text-align: center;
     position: relative;
     height: 500px;
+    cursor: default;
 }
 
 .priceBox::before {
@@ -712,6 +722,7 @@ sup {
     margin-top: 22px;
     padding: 8px 12px;
     position: relative;
+    cursor: pointer;
 }
 
 .list_label {
@@ -922,6 +933,12 @@ sup {
     height: 30px;
 }
 
+label {
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
 // section five
 .five {
     min-height: 540px;
@@ -959,6 +976,7 @@ sup {
     padding: 11px;
     font-size: 36px;
     font-family: inherit;
+    cursor: pointer;
 }
 
 .noReSize {
@@ -976,6 +994,9 @@ sup {
 
 #confirm-Text {
     font-size: 1.1em;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
 }
 
 .sendAll {
