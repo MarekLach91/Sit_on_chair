@@ -169,7 +169,7 @@
         <div class="grid-container">
             <div class="col-4 application">
                 <div class="main_width">
-                    <section class="choice_part inline">
+                    <div class="choice_part inline">
                         <div class="container row">
                             <h3 class="uText2">TWÓJ WYBÓR</h3>
                         </div>
@@ -206,6 +206,8 @@
                                     <label for="transport">Transport</label>
                                 </div>
                             </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="col-4 application">
@@ -238,53 +240,54 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        </section>
-        <section class="five">
-            <div class="grid-container">
-                <div class="container row">
-                    <h3 class="uText2 uText3">KONTAKT</h3>
-                </div>
-                <div class="col-8 input_place">
+    </section>
+    <section class="five">
+        <div class="grid-container">
+            <div class="container row">
+                <h3 class="uText2 uText3">KONTAKT</h3>
+            </div>
+            <div class="col-8 input_place">
+                <form action="customer2">
                     <input class="form_two" type="text" name="name" placeholder="Imię">
-                    <input class="form_two" type="text" name="surname" placeholder="email">
+                    <input class="form_two" type="text" name="surname" placeholder="Email">
                     <textarea class="form_two noReSize" type="text" placeholder="Wiadomość"></textarea>
-                    </form>
+                </form>
+            </div>
+            <div class="col-4 send_place">
+                <div id="orangechair"></div>
+                <div class="checkbox check-box confirm-box">
+                    <input type="checkbox" id="confirm">
+                    <label id="confirm-Text" for="confirm">Zgadzam sie na przetwarzanie danych osobowych</label>
                 </div>
-                <div class="col-4 send_place">
-                    <div id="orangechair"></div>
-                    <div class="checkbox check-box confirm-box">
-                        <input type="checkbox" id="confirm">
-                        <label id="confirm-Text" for="confirm">Zgadzam sie na przetwarzanie danych osobowych</label>
-                    </div>
-                    <input class="sendAll" type="button" value="WYŚLIJ" />
-                </div>
+                <input class="sendAll" type="button" value="WYŚLIJ" />
+            </div>
 
-                <div class="clearfix"></div>
-            </div>
-        </section>
-        <footer>
-            <div class="grid-container">
-                <div class="col-6 footer_rights">Copyright 2017 | All Rights Reserved. - Sit On Chair</div>
-                <div class="col-3 footer_img">
-                    <div class="ficker">
-                        <a class="link_footer" href="https://www.flickr.com/"></a>
-                    </div>
-                    <div class="vimeo">
-                        <a class="link_footer" href="https://vimeo.com/"></a>
-                    </div>
-                    <div class="pinterest">
-                        <a class="link_footer" href="https://pl.pinterest.com/"></a>
-                    </div>
-                    <div class="twitter">
-                        <a class="link_footer" href="https://twitter.com/"></a>
-                    </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="grid-container">
+            <div class="col-6 footer_rights">Copyright 2017 | All Rights Reserved. - Sit On Chair</div>
+            <div class="col-3 footer_img">
+                <div class="ficker">
+                    <a class="link_footer" href="https://www.flickr.com/"></a>
                 </div>
-                <div class="col-3 footer_title">
-                    <p>SIT <span>ON</span> OUR <span>CHAIR</span></p>
+                <div class="vimeo">
+                    <a class="link_footer" href="https://vimeo.com/"></a>
+                </div>
+                <div class="pinterest">
+                    <a class="link_footer" href="https://pl.pinterest.com/"></a>
+                </div>
+                <div class="twitter">
+                    <a class="link_footer" href="https://twitter.com/"></a>
                 </div>
             </div>
-        </footer>
-        <script src="js/app.js"></script>
+            <div class="col-3 footer_title">
+                <p>SIT <span>ON</span> OUR <span>CHAIR</span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
